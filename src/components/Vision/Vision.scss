@@ -1,0 +1,80 @@
+@import '../../helpers/mixins.scss';
+@import '../../helpers/variables.scss';
+
+.vision {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: fit-content;
+  background-color: $sections-background-color;
+
+  &__content {
+    width: 100%;
+    height: 571px;
+    background: url(./VisionImg/Shapes.png) center/contain no-repeat;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  @include on-tablet {
+    height: 796px;
+   }
+  }
+
+  &__container {
+    padding-inline: 20px;
+    @include page-grid;
+
+    justify-items: center;
+  }
+
+  &__title {
+    @include title-design;
+    font-size: 52px;
+    line-height: 62.4px;
+    text-align: center;
+    padding-bottom: 24px;
+    margin: 0;
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 2 / -2;
+    }
+
+    @include on-desktop {
+      grid-column: 3 / -3;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 33px;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 56px;
+    color: $secondary-text-color;
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      margin-bottom: 64px;
+      width: 558px;
+    }
+
+    @include on-desktop {
+      grid-column: 3 / -3;
+    }
+  }
+
+  &__button {
+    @include button;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+}

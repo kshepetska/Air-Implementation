@@ -1,0 +1,172 @@
+@import '../../helpers/variables.scss';
+@import '../../helpers/mixins.scss';
+
+.footer {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $header_footer-background-color;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 72px 20px 80px;
+
+  @include on-tablet {
+    padding: 180px 41px 80px;
+  }
+
+  @include on-desktop {
+    padding: 180px 54px 80px;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1146px;
+    @include page-grid;
+    row-gap: 80px;
+
+    @include on-tablet {
+      row-gap: 140px;
+    }
+
+    @include on-desktop {
+      row-gap: 120px;
+    }
+  }
+
+  &__navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    grid-column: 1 / -1;
+
+    @include on-desktop {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__air {
+    &-link {
+      margin-bottom: 48px;
+      transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+      @include on-tablet {
+        margin-bottom: 24px;
+      }
+
+      @include on-desktop {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    transition: color .2s ease;
+
+    @include on-tablet {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    @include on-desktop {
+      margin-left: 223px;
+    }
+
+
+  }
+
+  &__title {
+    position: relative;
+    margin-left: auto;
+    padding-right: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19.5px;
+    letter-spacing: 3px;
+    text-align: center;
+    color: $main-text-color;
+    text-decoration: none;
+    transition: color .2s ease;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(100% + 5px);
+      width: 0;
+      height: 2px;
+      transition: width .4s cubic-bezier(0.51, 0.18, 0, 0.88) .1s, background-color .2s ease;
+      right: 0;
+    }
+
+    &::after {
+      background: $accent-color;
+    }
+
+    &:hover {
+      &::after,
+      &::before {
+        width: 80%;
+        left: 0;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19.5px;
+    letter-spacing: 3px;
+    text-align: center;
+    color: $main-text-color;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-bottom: 24px;
+    transition: color .2s ease;
+
+    @include on-tablet {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(100% + 5px);
+      width: 0;
+      height: 2px;
+      transition: width .4s cubic-bezier(0.51, 0.18, 0, 0.88) .1s, background-color .2s ease;
+      right: 0;
+    }
+
+    &::after {
+      background: $accent-color;
+    }
+
+    &:hover {
+      &::after,
+      &::before {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+}

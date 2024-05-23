@@ -1,0 +1,163 @@
+@import '../../helpers/mixins.scss';
+@import '../../helpers/variables.scss';
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  background-color: $sections-background-color;
+  position: relative;
+  z-index: 0;
+
+  &__container {
+    @include page-grid;
+    padding: 60px 20px 120px;
+    width: 1146px;
+
+    @include on-tablet {
+      padding: 76px 41px 148px;
+    }
+  }
+
+  &__label {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19.5px;
+    letter-spacing: 3px;
+    text-align: start;
+    align-self: start;
+    color: $title-secondary-color;
+    margin-bottom: 16px;
+    grid-column: span 2;
+    grid-column: 1 / -1;
+
+  }
+
+  &__title {
+    @include title-design;
+    text-align: left;
+    margin-bottom: 48px;
+    grid-column: span 2;
+
+      grid-column: 1 / -1;
+
+
+    @include on-tablet {
+      margin-bottom: 56px;
+    }
+  }
+
+  &__items {
+    grid-column: span 2;
+    display: grid;
+    gap: 24px;
+    grid-column: 1 / -1;
+
+    @media (min-width: 767.98px) {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+
+  &__item {
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.testimonial {
+  box-shadow: 0 9px 18px 0 rgba(37, 41, 49, 0.03);
+  border-radius: 30px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 42px;
+
+  & .label {
+    text-align: center;
+  }
+
+  &__image {
+    position: relative;
+    height: 196px;
+    width: 196px;
+    margin-bottom: 24px;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      border-radius: 12px;
+      width: 108px;
+      height: 43px;
+      background: $accent-color;
+      transform: rotate(-60deg);
+    }
+
+    &::before {
+      top: 6px;
+      left: -40px;
+      transform-origin: top right;
+    }
+
+    &::after {
+      bottom: 6px;
+      right: -40px;
+      transform-origin: bottom left;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 110px;
+      width: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+  }
+
+  &__feedback {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 150%;
+    text-align: center;
+    color: $secondary-text-color;
+    margin-bottom: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 8px;
+
+    &::before {
+      content: '';
+    }
+  }
+
+  &__name {
+    margin-bottom: 4px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 19.5px;
+    text-align: center;
+  }
+
+  &__label {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19.5px;
+    letter-spacing: 3px;
+    text-align: center;
+    color: $testimonials-label-color;
+  }
+}

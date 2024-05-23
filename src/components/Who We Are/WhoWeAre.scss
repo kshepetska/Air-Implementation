@@ -1,0 +1,41 @@
+@import '../../helpers/variables.scss';
+@import '../../helpers/mixins.scss';
+
+.who-we {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $sections-background-color;
+  position: relative;
+  margin-top: -50px;
+  z-index: -1;
+
+  @include on-desktop {
+    margin-top: -50px;
+  }
+
+  &__content {
+    padding: 120px 70px;
+
+  }
+
+  &__title {
+    @include title-design;
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 33px;
+    text-align: center;
+    color: $secondary-text-color;
+
+    @include on-desktop {
+      width: 754px;
+    }
+  }
+}
+
+

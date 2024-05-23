@@ -1,0 +1,68 @@
+@import './variables.scss';
+
+@mixin on-tablet {
+  @media (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin on-big-desktop {
+  @media (min-width: $big-desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin title-design {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  text-align: center;
+  color: $title-color;
+}
+
+@mixin page-grid {
+  --columns: 2;
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  column-gap: 20px;
+
+
+  @include on-tablet {
+    --columns: 6;
+    column-gap: 30px;
+  }
+
+  @include on-desktop {
+    --columns: 12;
+    column-gap: 20px;
+  }
+}
+
+@mixin button {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: $accent-color;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22.5px;
+    text-align: center;
+    color: $main-text-color;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: blue;
+    }
+
+    @include on-tablet {
+      width: 280px;
+    }
+}
