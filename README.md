@@ -4,6 +4,9 @@
 
 Welcome to the Air landing page project! This comprehensive project showcases the implementation of a visually stunning and fully functional landing page designed according to specifications, utilizing modern web development practices.
 
+## Design
+The design for this project can be viewed here: https://tinyurl.com/3fxk498s.
+
 ## Technologies Used
 
 - HTML5: Structured the content of the landing page according to modern web standards.
