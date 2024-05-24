@@ -2,10 +2,10 @@
 
 ## Overview
 
-Welcome to the Air landing page project! This extensive endeavor demonstrates the creation of a visually captivating and highly functional landing page, meticulously crafted to meet specified requirements, employing state-of-the-art web development techniques. Let's revitalize this text.
+Introducing the Air landing page project! This ambitious endeavor showcases a visually captivating and highly functional landing page, meticulously designed to meet specified requirements, employing cutting-edge web development techniques. 
 
 ## Design
-The design for this project can be viewed here: https://tinyurl.com/3fxk498s.
+The design for this project can be viewed here: [Design](https://www.figma.com/design/7qwsWggv9BAxMi2VPhBuPr/Air-(formerly-Dia)?t=o50AHiM1W73OLYGk-0).
 
 ## Technologies Used
 
