@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the Air landing page project! This comprehensive project showcases the implementation of a visually stunning and fully functional landing page designed according to specifications, utilizing modern web development practices.
+Welcome to the Air landing page project! This extensive endeavor demonstrates the creation of a visually captivating and highly functional landing page, meticulously crafted to meet specified requirements, employing state-of-the-art web development techniques. Let's revitalize this text.
 
 ## Design
 The design for this project can be viewed here: https://tinyurl.com/3fxk498s.
