@@ -23,7 +23,7 @@ export const Services: React.FC = () => {
         <div className="services__items">
           {servicesData.map(({ number, points, link }, index) => (
             <article className="services__item" key={index}>
-              <div className="services__item container">
+              <div className="services__item-container">
                 <div className="service__number-container">
                   <p className="service__number">{number}</p>
                 </div>

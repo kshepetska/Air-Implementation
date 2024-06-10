@@ -100,10 +100,10 @@
     }
   }
 
-  &__item .container {
+  &__item-container {
+    height: 100%;
     padding: 32px;
     width: fit-content;
-    padding-bottom: 0;
   }
 
   &__item {
@@ -135,10 +135,6 @@
     height: 24px;
     border-radius: 23px;
     margin-bottom: 24px;
-
-    @include on-tablet {
-      margin-bottom: 0;
-    }
   }
 
   &__number {
@@ -150,11 +146,7 @@
   }
 
   &__list {
-    padding-bottom: 32px;
-
-    @include on-tablet {
-      padding-bottom: 0;
-    }
+    padding-bottom: 28px;
   }
 
   &__point {
